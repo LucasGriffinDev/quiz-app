@@ -13,7 +13,7 @@ const questions = [{
     answer: 'answer 4'
 }]
 
-score = 0
+scoreCount = 3
 
 let question = document.getElementById('question')
 let answerDiv = document.getElementById('answer')
@@ -21,6 +21,7 @@ let start = document.getElementById('start')
 let game = document.getElementById('game')
 let startGameButton = document.getElementById('start-button')
 let restartGameButton = document.getElementById('restart-button')
+let score = document.getElementById('score')
 
 startGameButton.addEventListener('click', startGame)
 restartGameButton.addEventListener('click', restartGame)
@@ -28,7 +29,8 @@ restartGameButton.addEventListener('click', restartGame)
 function startGame() {
     console.log('start game')
     start.classList.add('hide') 
-    game.classList.remove('hide') 
+    game.classList.remove('hide')
+    score.innerHTML += scoreCount
     
 }
 
